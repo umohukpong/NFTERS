@@ -1,84 +1,1084 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NFTERS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NFTERS — NFT Marketplace</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <header class="container navbar">
-      <h4 class="navbar__logo">NFTERS</h4>
-      <nav class="navbar__links">
-        <ul>
-          <li><a href="#">MarketPlace</a></li>
-          <li><a href="#">Resource</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-      <div>
-        <div>
-          <input type="search" name="search" id="search" placeholder="Search" />
-          <img src="assets/search.png" alt="search" />
+  <body class="page">
+    <!-- =========================
+       HEADER CONTAINER
+       ========================= -->
+    <header class="header">
+      <div class="container header__inner">
+        <h1 class="header__logo">NFters</h1>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Marketplace</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Resource</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <div class="search">
+            <input
+              class="search__input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <!--  <div>
+              <button class="search__btn" aria-hidden="true">
+                <img src="/assets/nfters/search.png" alt="" />
+              </button>
+            </div> -->
+            <svg
+              class="search__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+              />
+            </svg>
+          </div>
+
+          <button class="btn btn--outline header__wallet">
+            Connect Wallet
+          </button>
+
+          <!-- mobile menu button -->
+          <button class="header__menu" aria-label="Open menu">☰</button>
         </div>
-        <button>Connect Wallet</button>
       </div>
     </header>
+
+    <!-- =========================
+       MAIN CONTAINER
+       ========================= -->
     <main>
-      <!-- hero section -->
-      <section>
-        <div>
-          <h1>Discover, and collect Digital Art NFTs</h1>
-          <p>
-            Digital marketplace for crypto collectibles and non-fungible tokens
-            (NFTs). Buy, Sell, and discover exclusive digital assets
-          </p>
-          <button>Explore Now</button>
-          <div>
-            <div>
-              <h3>98k+</h3>
-              <h6>Artwork</h6>
+      <!-- =========================
+       HERO SECTION
+       ========================= -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <!-- Left column (text) -->
+          <div class="hero__content">
+            <h2 class="hero__title">Discover, and collect Digital Art NFTs</h2>
+            <p class="hero__subtitle">
+              Digital marketplace for crypto collectibles and non-fungible
+              tokens (NFTs). Buy, Sell, and discover exclusive digital assets.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#">Explore Now</a>
             </div>
-            <div>
-              <h3>12k+</h3>
-              <h6>Aution</h6>
-            </div>
-            <div>
-              <h3>15k+</h3>
-              <h6>Artist</h6>
+
+            <div class="hero__stats">
+              <div class="stat">
+                <div class="stat__value">98<span>k+</span></div>
+                <div class="stat__label">Artwork</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value">12<span>k+</span></div>
+                <div class="stat__label">Auction</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value">15<span>k+</span></div>
+                <div class="stat__label">Artist</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <img src="assets/hero1.png" alt="" />
-          <img src="assets/hero2.png" alt="" />
-          <img src="assets/hero3.png" alt="" />
+
+          <!-- Right column (stacked cards) -->
+          <div class="hero__visual">
+            <!-- decorative stacked images -->
+            <img
+              class="hero__card--back"
+              src="assets/nfters/stack_card_2.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="hero__card--far"
+              src="assets/nfters/stack_card_3.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <!-- main card -->
+            <div class="hero__card">
+              <div class="hero__card--top">
+                <div class="card__title">Abstr Gradient NFT</div>
+                <div class="card__author">
+                  <img src="assets/nfters/hero_profile_photo.png" alt="" />
+                  Arkhan17
+                </div>
+              </div>
+
+              <div class="hero__card--bottom card__meta">
+                <div>
+                  <p>Current Bid</p>
+                  <div>
+                    <img src="assets/nfters/ethereum.svg" alt="" />
+                    <span>0.25 ETH</span>
+                  </div>
+                </div>
+                <div>
+                  <p>Ends in</p>
+                  <span>12h 43m 42s</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- feature section -->
-      <section>
-        <div><p>The amazing NFT art of the world here</p></div>
-        <div>
-            <img src="assets/Vector.png" alt="" />
-            <div>
-                <h3>Fast Transaction</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            </div>
-          </div>
-        <div>
-            <img src="assets/Vector2.png" alt="" />
-            <div>
-                <h3>Growth Transaction</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            </div>
+      <!-- =========================
+         FEATURES / HIGHLIGHTS SECTION ---- The AMAZING NFT ART OF THE WORLD
+         ========================= -->
+      <section class="features">
+        <div class="container features__inner">
+          <h3 class="features__heading">
+            The amazing NFT art of the world here
+          </h3>
+
+          <div class="features__grid">
+            <article class="feature">
+              <img
+                class="feature__icon"
+                src="assets/nfters/card-tick.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="feature__body">
+                <h4 class="feature__title">Fast Transaction</h4>
+                <p class="feature__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aliquam veniam veliatus impedit.
+                </p>
+              </div>
+            </article>
+
+            <article class="feature">
+              <img
+                class="feature__icon"
+                src="assets/nfters/chart-square.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="feature__body">
+                <h4 class="feature__title">Growth Transaction</h4>
+                <p class="feature__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aliquam veniam veliatus impedit.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- feature section -->
-      <section></section>
+      <!-- =========================
+         FEATURES / HIGHLIGHTS SECTION ---- TOP COLLECTIONS OVER
+         ========================= -->
+      <section class="collections">
+        <div class="container collections__inner">
+          <div class="grid grid--3">
+            <article class="card collection__preview">
+              <img
+                class="collection__preview--img"
+                src="assets/nfters/top_collection_over_main_1.png"
+                alt="Amazing Collection 1"
+              />
+              <div class="collection__preview--about">
+                <div class="collection__preview--about_profile">
+                  <img
+                    src="assets/nfters/top_collection_over_main_profile_1.png"
+                    alt="Ethereum Logo"
+                    aria-hidden="true"
+                  />
+                  <div class="collection__preview--about_profile_info">
+                    <div class="preview--name">The Futr Abstr</div>
+                    <div class="preview--price">10 in the stock</div>
+                  </div>
+                </div>
+                <div class="collection__preview--about_price">
+                  <p class="collection__preview--about_price_title">
+                    Highest Bid
+                  </p>
+                  <div class="collection__preview--about_price_value">
+                    <img src="assets/nfters/ethblack.svg" alt="" />
+                    <div class="bidding--price">
+                      <p>0.25</p>
+                      <p>ETH</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card collection__owner">
+              <div class="collection__owner--profile">
+                <img
+                  class="nft--img"
+                  src="assets/nfters/top_collection_over_middle_1.png"
+                  alt="Amazing Collection 3"
+                />
+                <div class="collection__owner--profile_info">
+                  <h3 class="title">The Futr Abstr</h3>
+                  <div class="collection__owner--profile_info_price">
+                    <img
+                      src="assets/nfters/top_collection_over_main_profile_1.png"
+                      alt=""
+                    />
+                    <div class="bidding--price">
+                      <img src="assets/nfters/ethgreen.svg" alt="" />
+                      <p>0.25 ETH</p>
+                    </div>
+                    <p>1 of 8</p>
+                  </div>
+                  <button class="btn btn--primary">Place a bid</button>
+                </div>
+              </div>
+              <div class="collection__owner--profile">
+                <img
+                  class="nft--img"
+                  src="assets/nfters/top_collection_over_middle_2.png"
+                  alt="Amazing Collection 3"
+                />
+                <div class="collection__owner--profile_info">
+                  <h3 class="title">The Futr Abstr</h3>
+                  <div class="collection__owner--profile_info_price">
+                    <img
+                      src="assets/nfters/top_collection_over_main_profile_1.png"
+                      alt=""
+                    />
+                    <div class="bidding--price">
+                      <img src="assets/nfters/ethgreen.svg" alt="" />
+                      <p>0.25 ETH</p>
+                    </div>
+                    <p>1 of 8</p>
+                  </div>
+                  <button class="btn btn--outline">Place a bid</button>
+                </div>
+              </div>
+              <div class="collection__owner--profile">
+                <img
+                  class="nft--img"
+                  src="assets/nfters/top_collection_over_middle_3.png"
+                  alt="Amazing Collection 3"
+                />
+                <div class="collection__owner--profile_info">
+                  <h3 class="title">The Futr Abstr</h3>
+                  <div class="collection__owner--profile_info_price">
+                    <img
+                      src="assets/nfters/top_collection_over_main_profile_1.png"
+                      alt=""
+                    />
+                    <div class="bidding--price">
+                      <img src="assets/nfters/ethgreen.svg" alt="" />
+                      <p>0.25 ETH</p>
+                    </div>
+                    <p>1 of 8</p>
+                  </div>
+                  <button class="btn btn--outline">Place a bid</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="collection__partition"></article>
+
+            <article class="card collection__market">
+              <p class="title">Top Collections over</p>
+              <p class="subtitle">Last 7 days</p>
+              <div class="collection__market--card">
+                <p class="card_info--number">1</p>
+                <div class="card_info--verification">
+                  <img
+                    class="nft--img"
+                    src="assets/nfters/top_collections_1.png"
+                    alt="Amazing Collection 2"
+                  />
+                  <img
+                    class="verified--img"
+                    src="assets/nfters/verified.png"
+                    alt="Amazing Collection 2"
+                  />
+                </div>
+                <div class="card_info">
+                  <p class="card_info--name">CryptoFunks</p>
+                  <p class="card_info--price">
+                    <img src="assets/nfters/ethblack.svg" alt="" />
+                    <span>19,769.39</span>
+                  </p>
+                </div>
+                <p class="profit">+26.52%</p>
+              </div>
+              <div class="market_card--separator"></div>
+              <div class="collection__market--card">
+                <p class="card_info--number">2</p>
+                <div class="card_info--verification">
+                  <img
+                    class="nft--img"
+                    src="assets/nfters/top_collections_2.png"
+                    alt="Amazing Collection 2"
+                  />
+                  <img
+                    class="not_verified--img"
+                    src="assets/nfters/verified.png"
+                    alt="Amazing Collection 2"
+                  />
+                </div>
+                <div class="card_info">
+                  <p class="card_info--name">Cryptix</p>
+                  <p class="card_info--price">
+                    <img src="assets/nfters/ethblack.svg" alt="" />
+                    <span>2,769.39</span>
+                  </p>
+                </div>
+                <p class="loss">-10.52%</p>
+              </div>
+              <div class="market_card--separator"></div>
+              <div class="collection__market--card">
+                <p class="card_info--number">3</p>
+                <div class="card_info--verification">
+                  <img
+                    class="nft--img"
+                    src="assets/nfters/top_collections_3.png"
+                    alt="Amazing Collection 2"
+                  />
+                  <img
+                    class="not_verified--img"
+                    src="assets/nfters/verified.png"
+                    alt="Amazing Collection 2"
+                  />
+                </div>
+                <div class="card_info">
+                  <p class="card_info--name">Frensware</p>
+                  <p class="card_info--price">
+                    <img src="assets/nfters/ethblack.svg" alt="" />
+                    <span>9,232.39</span>
+                  </p>
+                </div>
+                <p class="profit">+2.52%</p>
+              </div>
+              <div class="market_card--separator"></div>
+              <div class="collection__market--card">
+                <p class="card_info--number">4</p>
+                <div class="card_info--verification">
+                  <img
+                    class="nft--img"
+                    src="assets/nfters/top_collections_4.png"
+                    alt="Amazing Collection 2"
+                  />
+                  <img
+                    class="verified--img"
+                    src="assets/nfters/verified.png"
+                    alt="Amazing Collection 2"
+                  />
+                </div>
+                <div class="card_info">
+                  <p class="card_info--name">PunkArt</p>
+                  <p class="card_info--price">
+                    <img src="assets/nfters/ethblack.svg" alt="" />
+                    <span>3,769.39</span>
+                  </p>
+                </div>
+                <p class="profit">+1.52%</p>
+              </div>
+              <div class="market_card--separator"></div>
+              <div class="collection__market--card">
+                <p class="card_info--number">5</p>
+                <div class="card_info--verification">
+                  <img
+                    class="nft--img"
+                    src="assets/nfters/top_collections_5.png"
+                    alt="Amazing Collection 2"
+                  />
+                  <img
+                    class="not_verified--img"
+                    src="assets/nfters/verified.png"
+                    alt="Amazing Collection 2"
+                  />
+                </div>
+                <div class="card_info">
+                  <p class="card_info--name">Art Crypto</p>
+                  <p class="card_info--price">
+                    <img src="assets/nfters/ethblack.svg" alt="" />
+                    <span>10,769.39</span>
+                  </p>
+                </div>
+                <p class="loss">-2.52%</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         FEATURED / HIGHLIGHTED CARDS --- COLLECTION FEATURED NFTS
+         ========================= -->
+      <section class="featured">
+        <div class="container featured__inner">
+          <h3 class="featured__title">Collection Featured NFTs</h3>
+
+          <div class="featured__grid">
+            <article class="card featured__collection">
+              <img
+                class="featured__img"
+                src="assets/nfters/collections_feautured_1.png"
+                alt="Amazing Collection 1"
+              />
+              <div class="featured__foot">
+                <div class="featured__profile">
+                  <h3 class="title">Amazing Collection</h3>
+                  <div class="author">
+                    <img
+                      src="assets/nfters/top_collection_over_main_profile_1.png"
+                      alt=""
+                    />
+                    <p>by Arkhan</p>
+                  </div>
+                </div>
+                <button class="btn--outline_sm">Total 54 Items</button>
+              </div>
+            </article>
+            <article class="card featured__collection">
+              <img
+                class="featured__img"
+                src="assets/nfters/collections_feautured_2.png"
+                alt="Amazing Collection 1"
+              />
+              <div class="featured__foot">
+                <div class="featured__profile">
+                  <h3 class="title">Amazing Collection</h3>
+                  <div class="author">
+                    <img
+                      src="assets/nfters/top_collection_over_main_profile_1.png"
+                      alt=""
+                    />
+                    <p>by Arkhan</p>
+                  </div>
+                </div>
+                <button class="btn--outline_sm">Total 54 Items</button>
+              </div>
+            </article>
+            <article class="card featured__collection">
+              <img
+                class="featured__img"
+                src="assets/nfters/collections_feautured_3.png"
+                alt="Amazing Collection 1"
+              />
+              <div class="featured__foot">
+                <div class="featured__profile">
+                  <h3 class="title">Amazing Collection</h3>
+                  <div class="author">
+                    <img
+                      src="assets/nfters/top_collection_over_main_profile_1.png"
+                      alt=""
+                    />
+                    <p>by Arkhan</p>
+                  </div>
+                </div>
+                <button class="btn--outline_sm">Total 54 Items</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         CALL TO ACTION (Create & Sell) CTA SECTION
+         ========================= -->
+      <section class="cta">
+        <div class="container cta__inner">
+          <div class="cta__media">
+            <img
+              src="assets/nfters/stack_card_1.png"
+              alt="Create NFTs"
+              class="cta__img"
+            />
+            <div class="cta__profile">
+              <img
+                src="assets/nfters/top_collection_over_main_profile_1.png"
+                alt="Create NFTs"
+                class="cta__img"
+              />
+              <img
+                src="assets/nfters/create_and_sell_profile_2.png"
+                alt="Create NFTs"
+                class="cta__img"
+              />
+            </div>
+          </div>
+
+          <div class="cta__content">
+            <h3 class="cta__title">Create and sell your NFTs</h3>
+            <p class="cta__desc">
+              Sell NFTs by showcasing your unique digital art on platforms like
+              OpenSea or Rarible. Create eye-catching pieces, mint them on a
+              blockchain like Ethereum, and promote your work on social media to
+              connect with potential buyers. Creativity and community engagement
+              are essential for success!
+            </p>
+            <a class="btn btn--primary" href="#">Sign Up Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         DISCOVER GRID SECTION
+         ========================= -->
+      <section class="discover">
+        <div class="container discover__inner">
+          <h3 class="discover__title">Discover more NFTs</h3>
+
+          <div class="discover__filters">
+            <div class="discover__categories">
+              <button class="btn btn--ghost ghost--active">
+                All Categories
+              </button>
+              <button class="btn btn--ghost">Art</button>
+              <button class="btn btn--ghost">Celebrities</button>
+              <button class="btn btn--ghost">Gaming</button>
+              <button class="btn btn--ghost">Sport</button>
+              <button class="btn btn--ghost">Music</button>
+              <button class="btn btn--ghost">Crypto</button>
+            </div>
+            <button class="btn btn--ghost">
+              <svg
+                class="filter__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 4h18M6 10h12M10 16h4"
+                />
+              </svg>
+
+              All Filters
+            </button>
+          </div>
+
+          <div class="grid grid--4 discover__grid">
+            <!-- NFT card repeated -->
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card nft">
+              <div class="nft__media">
+                <img
+                  class="nft__media--img"
+                  src="assets/nfters/collections_feautured_1.png"
+                  alt="ArtCrypto"
+                />
+                <div class="nft__profile">
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_1.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_2.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_3.png"
+                    alt="ArtCrypto"
+                  />
+                  <img
+                    class="nft__profile--img"
+                    src="assets/nfters/profile_photo_4.png"
+                    alt="ArtCrypto"
+                  />
+                </div>
+              </div>
+              <div class="nft__body">
+                <div class="nft__body--top">
+                  <h4 class="title">ArtCrypto</h4>
+                  <div class="price">
+                    <p>
+                      <img src="assets/nfters/ethgreen.svg" alt="" /> 0.25 ETH
+                    </p>
+                    <p>1 of 321</p>
+                  </div>
+                </div>
+                <div class="nft__divider"></div>
+                <div class="nft__actions">
+                  <button class="btn btn--ghost">
+                    <span>3h 50m 2s</span><span> left</span>
+                  </button>
+                  <button class="btn btn--outline_sm btn--ghost">
+                    Place a bid
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="discover__more">
+            <button class="btn btn--outline">More NFTs</button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+
+    <!-- =========================
+       FOOTER CONTAINER
+       ========================= -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer__brand">
+          <h4 class="footer__logo">NFters</h4>
+          <p class="footer__text">
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
+            exclusive digital items.
+          </p>
+          <div class="footer__social">
+            <img src="assets/nfters/facebook.svg" alt="" />
+            <img src="assets/nfters/twitter.svg" alt="" />
+            <img src="assets/nfters/linkedin.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h5 class="footer__heading">Market Place</h5>
+            <ul>
+              <li><a href="#">All NFTs</a></li>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Art</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Utility</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Domain Name</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h5 class="footer__heading">My Account</h5>
+            <ul>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Favorite</a></li>
+              <li><a href="#">My Collections</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer_newsletter">
+            <h5 class="footer__heading">Stay In The Loop</h5>
+            <p class="footer__small">
+              Join our mailing list to stay in the loop with our newest feature
+              releases, NFT drops, and tips and tricks for navigating NFTs.
+            </p>
+            <!-- Newsletter Form -->
+            <form class="newsletter" action="#" method="post">
+              <input
+                class="newsletter__input"
+                type="email"
+                placeholder="Enter your email address.."
+                aria-label="Email"
+                required
+              />
+              <button class="newsletter__btn" type="submit">
+                Subscribe Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__copyright">
+        © <span id="year"></span> NFters. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- small inline script to set year (optional) -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

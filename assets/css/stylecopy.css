@@ -1,0 +1,54 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: var(--font-Manrope); */
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Container styling */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 120px;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 120px;
+}
+
+.navbar .navbar__logo {
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  leading-trim: none;   /* Does nothing right now */
+  line-height: 100%;    /* Keeps tight line spacing */
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.navbar .navbar__links {
+  display: flex;
+  gap: 20px;
+}

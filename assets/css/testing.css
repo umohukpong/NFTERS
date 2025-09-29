@@ -1,0 +1,264 @@
+/* =========================================================
+   NFTERS — style.css
+   Optimized for Header + Hero
+   ========================================================= */
+
+/* -------------------------
+   Variables
+   ------------------------- */
+:root {
+  --container-max: 1440px;
+
+  --font-base: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  --text-dark: #000000;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --primary: #6d28d9; /* purple */
+  --accent: #7c3aed;
+  --outline: #e5e7eb;
+
+  --radius-lg: 18px;
+
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 40px;
+}
+
+/* -------------------------
+   Reset & base
+   ------------------------- */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-dark);
+  font-family: var(--font-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: 0 120px;
+}
+
+/* -------------------------
+   Buttons
+   ------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: var(--fs-base);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.btn--primary {
+  background: #4a00e0; /* solid purple */
+  color: white;
+}
+
+.btn--outline {
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+/* -------------------------
+   Header
+   ------------------------- */
+header {
+  background: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0;
+}
+
+.nav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.nav__link {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: #333;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--outline);
+  border-radius: 40px;
+  padding: 6px 12px;
+}
+
+.search__input {
+  border: none;
+  outline: none;
+  font-size: var(--fs-sm);
+  padding: 4px;
+  width: 140px;
+}
+
+.search__btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* hide menu button on desktop */
+.header__menu {
+  display: none;
+}
+
+/* -------------------------
+   HERO
+   ------------------------- */
+.hero {
+  padding: 80px 0;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-base);
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__stats {
+  display: flex;
+  gap: 32px;
+}
+
+.stat__value {
+  font-weight: 800;
+  font-size: var(--fs-lg);
+}
+
+.stat__label {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Visual cards */
+.hero__visual {
+  position: relative;
+}
+
+.card--hero {
+  width: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.card__meta {
+  padding: 12px 16px;
+}
+
+.card__title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.hero__layer {
+  position: absolute;
+  border-radius: var(--radius-lg);
+  width: 300px;
+  left: 20px;
+}
+
+.hero__layer--back {
+  top: 20px;
+  transform: rotate(6deg);
+  z-index: 5;
+}
+
+.hero__layer--far {
+  top: 40px;
+  transform: rotate(10deg);
+  z-index: 0;
+  opacity: 0.9;
+}
